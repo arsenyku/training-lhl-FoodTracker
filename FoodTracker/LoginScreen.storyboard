@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="D5q-2C-uUh">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login-->
+        <scene sceneID="HL6-ic-86B">
+            <objects>
+                <viewController title="Login" id="D5q-2C-uUh" customClass="LoginViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zhM-gi-pXI"/>
+                        <viewControllerLayoutGuide type="bottom" id="DkZ-Tf-eVx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tc4-Xc-QeQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LPl-Ld-737">
+                                <rect key="frame" x="20" y="190" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oWn-Mx-zPa">
+                                <rect key="frame" x="140" y="290" width="320" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="KK1-lJ-xad"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="D5q-2C-uUh" id="xpQ-cf-QU0"/>
+                                    <outlet property="delegate" destination="D5q-2C-uUh" id="LZt-p4-bDZ"/>
+                                </connections>
+                            </pickerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fpb-iy-YbC">
+                                <rect key="frame" x="225" y="20" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="ZNb-hu-gpZ"/>
+                                    <constraint firstAttribute="height" constant="150" id="nrW-vF-ZO0"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ayP-k0-qfS">
+                                <rect key="frame" x="20" y="240" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="125" translatesAutoresizingMaskIntoConstraints="NO" id="TQD-kg-Mie">
+                                <rect key="frame" x="195" y="410" width="211" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5y-cP-Rpb" userLabel="Login button">
+                                        <rect key="frame" x="0.0" y="0.0" width="38" height="30"/>
+                                        <state key="normal" title="Login"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cm2-Zg-97B" userLabel="Signup button">
+                                        <rect key="frame" x="163" y="0.0" width="48" height="30"/>
+                                        <state key="normal" title="Signup"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Fpb-iy-YbC" firstAttribute="centerX" secondItem="tc4-Xc-QeQ" secondAttribute="centerX" id="0Dn-Z1-wjO"/>
+                            <constraint firstItem="ayP-k0-qfS" firstAttribute="top" secondItem="LPl-Ld-737" secondAttribute="bottom" constant="20" id="8xF-2f-VIP"/>
+                            <constraint firstItem="ayP-k0-qfS" firstAttribute="leading" secondItem="tc4-Xc-QeQ" secondAttribute="leadingMargin" id="AxJ-2p-RhP"/>
+                            <constraint firstItem="LPl-Ld-737" firstAttribute="leading" secondItem="tc4-Xc-QeQ" secondAttribute="leadingMargin" id="GB4-NM-Mjl"/>
+                            <constraint firstItem="Fpb-iy-YbC" firstAttribute="top" secondItem="tc4-Xc-QeQ" secondAttribute="topMargin" constant="20" id="GfN-2B-AJS"/>
+                            <constraint firstItem="ayP-k0-qfS" firstAttribute="trailing" secondItem="tc4-Xc-QeQ" secondAttribute="trailingMargin" id="RcS-dZ-MWS"/>
+                            <constraint firstItem="TQD-kg-Mie" firstAttribute="centerX" secondItem="tc4-Xc-QeQ" secondAttribute="centerX" id="c1B-TW-7jZ"/>
+                            <constraint firstItem="oWn-Mx-zPa" firstAttribute="top" secondItem="ayP-k0-qfS" secondAttribute="bottom" constant="20" id="fRU-jv-pLH"/>
+                            <constraint firstItem="oWn-Mx-zPa" firstAttribute="centerX" secondItem="tc4-Xc-QeQ" secondAttribute="centerX" id="kDc-OE-3VG"/>
+                            <constraint firstItem="TQD-kg-Mie" firstAttribute="top" secondItem="oWn-Mx-zPa" secondAttribute="bottom" constant="20" id="quv-Fj-o7g"/>
+                            <constraint firstItem="LPl-Ld-737" firstAttribute="top" secondItem="Fpb-iy-YbC" secondAttribute="bottom" constant="20" id="tnn-84-wNz"/>
+                            <constraint firstItem="LPl-Ld-737" firstAttribute="trailing" secondItem="tc4-Xc-QeQ" secondAttribute="trailingMargin" id="wgL-q6-vlZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="X5y-cP-Rpb" id="XeG-4a-dRd"/>
+                        <outlet property="pickerView" destination="oWn-Mx-zPa" id="a0r-zk-nxh"/>
+                        <outlet property="signupButton" destination="cm2-Zg-97B" id="fQs-Gb-Osr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vLw-1L-oTw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="393" y="400"/>
+        </scene>
+    </scenes>
+</document>
