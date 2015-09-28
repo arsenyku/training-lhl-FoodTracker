@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		12BE5EB71BB9CDD70089DD4D /* LoginScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12BE5EB61BB9CDD70089DD4D /* LoginScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
 		12BE5EBA1BB9D7660089DD4D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BE5EB91BB9D7660089DD4D /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		2DDCF1594893EB423F385B6E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F4754B375366677F4F5D1A /* libPods.a */; };
 		CA1292781B150DF500303C8D /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1292771B150DF500303C8D /* RatingControl.swift */; };
 		CA1902E01B10E523000271C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1902DF1B10E523000271C4 /* AppDelegate.swift */; };
 		CA1902E21B10E523000271C4 /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1902E11B10E523000271C4 /* MealViewController.swift */; };
@@ -33,8 +34,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		070C4362E7F3EF6DD300CB6E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		12BE5EB61BB9CDD70089DD4D /* LoginScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginScreen.storyboard; sourceTree = "<group>"; };
 		12BE5EB91BB9D7660089DD4D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		215E402E80AE1FEEBF0D8CB6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		71F4754B375366677F4F5D1A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA1292771B150DF500303C8D /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		CA1902DC1B10E523000271C4 /* FoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA1902DF1B10E523000271C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DDCF1594893EB423F385B6E /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,12 +84,31 @@
 			name = Storyboard;
 			sourceTree = "<group>";
 		};
+		86B358D84C8CFB806E19475F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71F4754B375366677F4F5D1A /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		99BB8752C4D868C261E02F5B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				070C4362E7F3EF6DD300CB6E /* Pods.debug.xcconfig */,
+				215E402E80AE1FEEBF0D8CB6 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CA1902D31B10E523000271C4 = {
 			isa = PBXGroup;
 			children = (
 				CA1902DE1B10E523000271C4 /* FoodTracker */,
 				CA1902F31B10E523000271C4 /* FoodTrackerTests */,
 				CA1902DD1B10E523000271C4 /* Products */,
+				99BB8752C4D868C261E02F5B /* Pods */,
+				86B358D84C8CFB806E19475F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,9 +154,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA1902F91B10E523000271C4 /* Build configuration list for PBXNativeTarget "FoodTracker" */;
 			buildPhases = (
+				7218774011537E1645818B56 /* Check Pods Manifest.lock */,
 				CA1902D81B10E523000271C4 /* Sources */,
 				CA1902D91B10E523000271C4 /* Frameworks */,
 				CA1902DA1B10E523000271C4 /* Resources */,
+				02DCBB3820D6D29FA3F5318D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -218,6 +244,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02DCBB3820D6D29FA3F5318D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7218774011537E1645818B56 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CA1902D81B10E523000271C4 /* Sources */ = {
@@ -358,6 +417,7 @@
 		};
 		CA1902FA1B10E523000271C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 070C4362E7F3EF6DD300CB6E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FoodTracker/Info.plist;
@@ -369,6 +429,7 @@
 		};
 		CA1902FB1B10E523000271C4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 215E402E80AE1FEEBF0D8CB6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FoodTracker/Info.plist;
